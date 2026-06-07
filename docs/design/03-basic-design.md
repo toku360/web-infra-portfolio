@@ -249,5 +249,18 @@ Git管理対象外
 - AWS構成
 - Terraform構成
 
+## AWS構成
+
+VPC
+
+Public Subnet
+
+Private Subnet
+
+Database Subnet
+
+を利用する。
+
+
 
 
