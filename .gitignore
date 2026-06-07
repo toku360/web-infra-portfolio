@@ -1,0 +1,33 @@
+# Environment
+.env
+.env.*
+
+# Certificates
+*.pem
+*.key
+*.pfx
+*.p12
+*.jks
+
+# Logs
+*.log
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Oracle
+*.dmp
+
+# Database
+db_data/
+oracle_data/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
