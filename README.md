@@ -212,5 +212,21 @@ web-infra-portfolio/
 - 変更管理
 - ロールバック
 
+# Linux運用設計
+
+作成済み
+
+- Linux Operation Design
+- LVM Capacity Management Design
+
+対応範囲
+
+- 容量管理
+- LVM
+- Filesystem拡張
+- 運用設計
+- ロールバック
+
+
 
 
