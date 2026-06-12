@@ -22,6 +22,28 @@ WebLogic
 
 Oracle
 
+
+## 採用サービス
+
+Route53
+
+ALB
+
+EC2
+
+Aurora
+
+CloudWatch
+
+SNS
+
+SSM
+
+S3
+
+AWS Backup
+
+
 ---
 
 # 3. 各コンポーネント
