@@ -214,12 +214,10 @@ web-infra-portfolio/
 
 # Linux運用設計
 
-作成済み
-
 - Linux Operation Design
 - LVM Capacity Management Design
 
-対応範囲
+## 対応範囲
 
 - 容量管理
 - LVM
@@ -227,6 +225,17 @@ web-infra-portfolio/
 - 運用設計
 - ロールバック
 
+- Linux Operation Design
+- LVM Capacity Management Design
+- NFS Operation Design
 
+## 対応範囲
+
+- NFS
+- 共有ストレージ
+- マウント管理
+- 容量管理
+- 障害対応
+- ロールバック
 
 
