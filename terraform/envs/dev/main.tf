@@ -38,4 +38,16 @@ module "network" {
 }
 
 
+module "security_group" {
+  source = "../../modules/security-group"
+
+  project     = "web-infra-portfolio"
+  environment = "dev"
+
+  vpc_id = module.network.vpc_id
+
+  allowed_http_cidrs  = ["0.0.0.0/0"]
+  allowed_https_cidrs = ["0.0.0.0/0"]
+}
+
 

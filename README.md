@@ -360,5 +360,31 @@ TerraformでAWS dev環境のネットワーク基盤を構築しました。
 - dev環境ではコスト抑制のためNAT Gatewayは後続判断
 
 
+---
+
+# Security Group Build
+
+TerraformでAWS dev環境のSecurity Groupを構築しました。
+
+## 構築対象：
+
+- ALB Security Group
+- Apache Security Group
+- WebLogic Security Group
+- Oracle RDS Security Group
+
+## 通信方針：
+
+- Internet → ALB
+- ALB → Apache
+- Apache → WebLogic
+- WebLogic → Oracle RDS
+
+## 設計方針：
+
+- 最小権限
+- 層ごとの分離
+- Security Group参照を優先
+- Oracle RDSは外部公開しない
 
 
