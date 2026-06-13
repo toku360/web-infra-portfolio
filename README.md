@@ -265,4 +265,18 @@ web-infra-portfolio/
 - 障害対応
 - 証跡管理
 
+# Maintenance Design
+
+- Maintenance Design
+
+## 対応範囲
+
+- OS Patch
+- Apache Update
+- JDK Update
+- WebLogic PSU
+- Oracle RDS Maintenance
+- Terraform Upgrade
+- Rollback
+
 
