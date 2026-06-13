@@ -279,4 +279,32 @@ web-infra-portfolio/
 - Terraform Upgrade
 - Rollback
 
+## AWS Build Standard
+
+- AWS Build Standard
+
+## 対応範囲
+
+- Terraform
+- Route53
+- ALB
+- EC2
+- Oracle RDS
+- CloudWatch
+- SNS
+- S3
+- IAM
+
+## Terraform Platform Design
+
+- Terraform Platform Design
+
+## 対応範囲
+
+- Backend
+- State
+- Lock
+- Secrets
+- Git管理
+
 
