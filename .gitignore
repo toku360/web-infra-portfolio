@@ -32,8 +32,18 @@ oracle_data/
 .DS_Store
 Thumbs.db
 
+# AWS
 .aws/
-terraform.tfvars
-*.tfvars
 
+# terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+.env
+.env.*
+*.pem
+*.key
+*.log
 

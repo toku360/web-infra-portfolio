@@ -307,4 +307,18 @@ web-infra-portfolio/
 - Secrets
 - Git管理
 
+## Terraform Backend
+
+## 構築済み
+
+- S3 Backend
+- DynamoDB Lock
+
+## 対応範囲
+
+- Versioning
+- Encryption
+- State Management
+
+
 
