@@ -196,11 +196,14 @@ web-infra-portfolio/
 
 # Linux運用設計
 
-作成済み設計書
+## 設計書
 
 - Linux Operation Design
+- LVM Capacity Management Design
+- NFS Operation Design
+- Pacemaker High Availability Design
 
-対応範囲
+## 対応範囲
 
 - サービス管理
 - 監視
@@ -212,42 +215,19 @@ web-infra-portfolio/
 - 変更管理
 - ロールバック
 
-# Linux運用設計
-
-- Linux Operation Design
-- LVM Capacity Management Design
-
-## 対応範囲
-
 - 容量管理
 - LVM
 - Filesystem拡張
 - 運用設計
 - ロールバック
-
-- Linux Operation Design
-- LVM Capacity Management Design
-- NFS Operation Design
-
-## 対応範囲
-
+ 
 - NFS
 - 共有ストレージ
 - マウント管理
 - 容量管理
 - 障害対応
 - ロールバック
-
-
-# Linux運用設計
-
-- Linux Operation Design
-- LVM Capacity Management Design
-- NFS Operation Design
-- Pacemaker High Availability Design
-
-## 対応範囲
-
+ 
 - HAクラスタ
 - Pacemaker
 - Corosync
@@ -255,6 +235,22 @@ web-infra-portfolio/
 - フェイルバック
 - STONITH
 
+# Monitoring Design
+
+- CloudWatch
+- SNS
+- SSM
+- Oracle RDS Monitoring
+- ALB Monitoring
+
+## 監視対象
+
+- CPU
+- Memory
+- Disk
+- Apache
+- WebLogic
+- Oracle
 
 
 
