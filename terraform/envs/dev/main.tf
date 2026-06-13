@@ -27,12 +27,15 @@ module "network" {
   project     = "web-infra-portfolio"
   environment = "dev"
 
-  vpc_cidr                = "10.0.0.0/16"
-  public_subnet_cidr      = "10.0.1.0/24"
+  vpc_cidr = "10.0.0.0/16"
+
+  public_subnet_a_cidr    = "10.0.1.0/24"
+  public_subnet_c_cidr    = "10.0.11.0/24"
   private_app_subnet_cidr = "10.0.2.0/24"
   private_db_subnet_cidr  = "10.0.3.0/24"
 
-  public_subnet_az      = "ap-northeast-1a"
+  public_subnet_a_az    = "ap-northeast-1a"
+  public_subnet_c_az    = "ap-northeast-1c"
   private_app_subnet_az = "ap-northeast-1a"
   private_db_subnet_az  = "ap-northeast-1a"
 }
@@ -49,5 +52,18 @@ module "security_group" {
   allowed_http_cidrs  = ["0.0.0.0/0"]
   allowed_https_cidrs = ["0.0.0.0/0"]
 }
+
+
+module "alb" {
+  source = "../../modules/alb"
+
+  project     = "web-infra-portfolio"
+  environment = "dev"
+
+  vpc_id            = module.network.vpc_id
+  alb_sg_id         = module.security_group.alb_sg_id
+  public_subnet_ids = module.network.public_subnet_ids
+}
+
 
 
