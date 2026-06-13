@@ -253,5 +253,16 @@ web-infra-portfolio/
 - Oracle
 
 
+# Operation Standards
+
+- Runbook Standard
+- Incident Response Standard
+- Evidence Management Standard
+
+## 対応範囲
+
+- 運用手順
+- 障害対応
+- 証跡管理
 
 
