@@ -321,4 +321,22 @@ web-infra-portfolio/
 - State Management
 
 
+# Terraform Remote Backend
+
+Terraform State管理をRemote Backendへ移行しました。
+
+採用構成：
+
+- S3：State保存
+- DynamoDB：State Lock
+- S3 Versioning：有効
+- S3 Encryption：有効
+
+目的：
+
+- State消失防止
+- 同時実行防止
+- GitHubへのState誤登録防止
+- 構成管理の安全性向上
+
 

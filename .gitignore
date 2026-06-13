@@ -28,9 +28,12 @@ oracle_data/
 .vscode/
 .idea/
 
-# OS
+# OS / Editor
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
+
 
 # AWS
 .aws/
@@ -46,4 +49,6 @@ Thumbs.db
 *.pem
 *.key
 *.log
+
+
 
