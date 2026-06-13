@@ -239,3 +239,23 @@ web-infra-portfolio/
 - ロールバック
 
 
+# Linux運用設計
+
+- Linux Operation Design
+- LVM Capacity Management Design
+- NFS Operation Design
+- Pacemaker High Availability Design
+
+## 対応範囲
+
+- HAクラスタ
+- Pacemaker
+- Corosync
+- フェイルオーバー
+- フェイルバック
+- STONITH
+
+
+
+
+
