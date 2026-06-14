@@ -78,4 +78,12 @@ module "ec2_apache" {
   target_group_arn = module.alb.apache_target_group_arn
 }
 
+module "cloudwatch" {
+
+  source = "../../modules/cloudwatch"
+
+  instance_id = module.ec2_apache.apache_instance_id
+}
+
+
 
