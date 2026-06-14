@@ -38,4 +38,14 @@ output "apache_target_group_arn" {
   value = module.alb.apache_target_group_arn
 }
 
+output "apache_instance_id" {
+  value = module.ec2_apache.apache_instance_id
+}
+
+output "apache_private_ip" {
+  value = module.ec2_apache.apache_private_ip
+}
+
+
+
 

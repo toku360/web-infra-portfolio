@@ -66,4 +66,16 @@ module "alb" {
 }
 
 
+module "ec2_apache" {
+  source = "../../modules/ec2-apache"
+
+  project     = "web-infra-portfolio"
+  environment = "dev"
+
+  ami_id           = var.rocky_ami_id
+  subnet_id        = module.network.public_subnet_ids[0]
+  apache_sg_id     = module.security_group.apache_sg_id
+  target_group_arn = module.alb.apache_target_group_arn
+}
+
 
