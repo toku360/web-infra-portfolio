@@ -10,8 +10,7 @@ output "weblogic_sg_id" {
   value = aws_security_group.weblogic.id
 }
 
-output "oracle_rds_sg_id" {
-  value = aws_security_group.oracle_rds.id
+output "rds_sg_id" {
+  value = aws_security_group.rds.id
 }
-
 

@@ -388,3 +388,53 @@ TerraformでAWS dev環境のSecurity Groupを構築しました。
 - Oracle RDSは外部公開しない
 
 
+# RDS Multi-AZ Subnet Build
+
+## Day27
+
+RDS構築のため、Private DB SubnetをMulti-AZ化しました。
+
+追加構成：
+
+- Private DB Subnet C
+- DB Subnet Group
+- PostgreSQL RDS
+
+設計方針：
+
+- 本番想定はOracle RDS
+- dev環境はコスト抑制のためPostgreSQL RDS
+- DBはPrivate Subnetに配置
+- InternetからDBへの直接接続は禁止
+- RDS Subnet Groupは複数AZを利用可能な構成
+
+
+---
+
+# CloudWatch Monitoring
+
+## Day28
+
+EC2 / ALB / RDS のCloudWatch監視をTerraformで構築しました。
+
+構築対象：
+
+- SNS Topic
+- EC2 CPU Alarm
+- EC2 StatusCheck Alarm
+- ALB 5XX Alarm
+- ALB TargetResponseTime Alarm
+- Target HealthyHostCount Alarm
+- RDS CPU Alarm
+- RDS FreeStorageSpace Alarm
+- RDS DatabaseConnections Alarm
+
+運用観点：
+
+- 障害の早期検知
+- 一次対応Runbook
+- エスカレーション判断
+- 本番想定ではTeams / ServiceNow連携を検討
+
+
+

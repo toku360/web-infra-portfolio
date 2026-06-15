@@ -98,17 +98,17 @@ resource "aws_security_group" "weblogic" {
   }
 }
 
-resource "aws_security_group" "oracle_rds" {
-  name        = "${var.project}-${var.environment}-oracle-rds-sg"
-  description = "Security group for Oracle RDS"
+resource "aws_security_group" "rds" {
+  name        = "wip-${var.environment}-rds-sg"
+  description = "Security group for RDS"
   vpc_id      = var.vpc_id
 
   ingress {
-    description     = "Allow Oracle from WebLogic"
-    from_port       = 1521
-    to_port         = 1521
+    description     = "Allow PostgreSQL from Apache EC2"
+    from_port       = 5432
+    to_port         = 5432
     protocol        = "tcp"
-    security_groups = [aws_security_group.weblogic.id]
+    security_groups = [aws_security_group.apache.id]
   }
 
   egress {
@@ -120,10 +120,12 @@ resource "aws_security_group" "oracle_rds" {
   }
 
   tags = {
-    Name        = "${var.project}-${var.environment}-oracle-rds-sg"
+    Name        = "wip-${var.environment}-rds-sg"
     Project     = var.project
     Environment = var.environment
+    Role        = "rds"
   }
 }
+
 
 

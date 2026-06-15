@@ -81,12 +81,16 @@ module "ec2_apache" {
 }
 
 module "cloudwatch" {
-
   source = "../../modules/cloudwatch"
 
-  instance_id = module.ec2_apache.apache_instance_id
-}
+  project_short = "wip"
+  environment   = "dev"
 
+  instance_id             = module.ec2_apache.apache_instance_id
+  alb_arn_suffix          = module.alb.alb_arn_suffix
+  target_group_arn_suffix = module.alb.apache_target_group_arn_suffix
+  db_instance_identifier  = module.rds.db_instance_identifier
+}
 
 module "rds" {
   source = "../../modules/rds"

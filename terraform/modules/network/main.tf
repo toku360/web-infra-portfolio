@@ -75,6 +75,25 @@ resource "aws_subnet" "private_db" {
   }
 }
 
+resource "aws_subnet" "private_db_c" {
+  vpc_id            = aws_vpc.this.id
+  cidr_block        = var.private_db_subnet_c_cidr
+  availability_zone = var.private_db_subnet_c_az
+
+  tags = {
+    Name        = "${var.project}-${var.environment}-private-db-subnet-c"
+    Project     = var.project
+    Environment = var.environment
+    Tier        = "private-db"
+  }
+}
+
+resource "aws_route_table_association" "private_db_c" {
+  subnet_id      = aws_subnet.private_db_c.id
+  route_table_id = aws_route_table.private_db.id
+}
+
+
 resource "aws_route_table" "public" {
   vpc_id = aws_vpc.this.id
 
