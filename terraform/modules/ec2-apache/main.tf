@@ -49,10 +49,10 @@ resource "aws_instance" "apache" {
 
   echo "web-infra-portfolio dev apache" > /var/www/html/index.html
   EOF
-  
+
   metadata_options {
-  http_tokens = "required"
-  http_put_response_hop_limit = 2
+    http_tokens                 = "required"
+    http_put_response_hop_limit = 2
   }
 
   root_block_device {
