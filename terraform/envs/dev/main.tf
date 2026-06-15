@@ -29,15 +29,17 @@ module "network" {
 
   vpc_cidr = "10.0.0.0/16"
 
-  public_subnet_a_cidr    = "10.0.1.0/24"
-  public_subnet_c_cidr    = "10.0.11.0/24"
-  private_app_subnet_cidr = "10.0.2.0/24"
-  private_db_subnet_cidr  = "10.0.3.0/24"
+  public_subnet_a_cidr     = "10.0.1.0/24"
+  public_subnet_c_cidr     = "10.0.11.0/24"
+  private_app_subnet_cidr  = "10.0.2.0/24"
+  private_db_subnet_cidr   = "10.0.3.0/24"
+  private_db_subnet_c_cidr = "10.0.13.0/24"
 
-  public_subnet_a_az    = "ap-northeast-1a"
-  public_subnet_c_az    = "ap-northeast-1c"
-  private_app_subnet_az = "ap-northeast-1a"
-  private_db_subnet_az  = "ap-northeast-1a"
+  public_subnet_a_az     = "ap-northeast-1a"
+  public_subnet_c_az     = "ap-northeast-1c"
+  private_app_subnet_az  = "ap-northeast-1a"
+  private_db_subnet_az   = "ap-northeast-1a"
+  private_db_subnet_c_az = "ap-northeast-1c"
 }
 
 
@@ -85,5 +87,17 @@ module "cloudwatch" {
   instance_id = module.ec2_apache.apache_instance_id
 }
 
+
+module "rds" {
+  source = "../../modules/rds"
+
+  project     = "web-infra-portfolio"
+  environment = "dev"
+
+  db_subnet_ids = module.network.private_db_subnet_ids
+
+  rds_sg_id   = module.security_group.rds_sg_id
+  db_password = var.db_password
+}
 
 

@@ -26,8 +26,8 @@ output "weblogic_sg_id" {
   value = module.security_group.weblogic_sg_id
 }
 
-output "oracle_rds_sg_id" {
-  value = module.security_group.oracle_rds_sg_id
+output "rds_sg_id" {
+  value = module.security_group.rds_sg_id
 }
 
 output "alb_dns_name" {
@@ -46,6 +46,9 @@ output "apache_private_ip" {
   value = module.ec2_apache.apache_private_ip
 }
 
+output "private_db_subnet_ids" {
+  value = module.network.private_db_subnet_ids
+}
 
 
 
