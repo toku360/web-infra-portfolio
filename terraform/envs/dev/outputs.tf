@@ -50,5 +50,9 @@ output "private_db_subnet_ids" {
   value = module.network.private_db_subnet_ids
 }
 
+output "weblogic_instance_id" {
+
+  value = module.ec2_weblogic.instance_id
+}
 
 

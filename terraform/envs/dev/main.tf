@@ -104,4 +104,20 @@ module "rds" {
   db_password = var.db_password
 }
 
+module "ec2_weblogic" {
+
+  source = "../../modules/ec2-weblogic"
+
+  project = "var.project"
+
+  environment = var.environment
+
+  subnet_id = module.network.private_app_subnet_id
+
+  security_group_id = module.security_group.weblogic_sg_id
+}
+
+
+
+
 

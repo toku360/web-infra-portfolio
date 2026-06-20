@@ -7,3 +7,15 @@ variable "db_password" {
   type      = string
   sensitive = true
 }
+
+variable "environment" {
+  description = "Environment"
+  type        = string
+  default     = "dev"
+}
+
+variable "project" {
+  description = "Project name"
+  type        = string
+  default     = "web-infra-portfolio"
+}
