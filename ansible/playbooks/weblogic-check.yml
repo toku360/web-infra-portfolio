@@ -1,0 +1,28 @@
+
+- name: WebLogic Health Check
+
+  hosts: weblogic
+
+  become: yes
+
+  tasks:
+
+    - name: Java Process
+
+      shell: ps -ef | grep java
+
+      register: java_process
+
+    - debug:
+        var: java_process.stdout_lines
+
+    - name: Memory
+
+      command: free -m
+
+      register: memory_result
+
+    - debug:
+        var: memory_result.stdout_lines
+
+

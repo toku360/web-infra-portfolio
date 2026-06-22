@@ -1,0 +1,19 @@
+{
+    "Snapshots": [
+        {
+            "StorageTier": "standard",
+            "TransferType": "standard",
+            "CompletionTime": "2026-06-22T02:48:58.920000+00:00",
+            "FullSnapshotSizeInBytes": 10737418240,
+            "SnapshotId": "snap-00798dcd0816aed0d",
+            "VolumeId": "vol-0623a0f4ab9fd558a",
+            "State": "completed",
+            "StartTime": "2026-06-22T02:48:11.283000+00:00",
+            "Progress": "100%",
+            "OwnerId": "723288728731",
+            "Description": "Day37 WebLogic before reboot snapshot",
+            "VolumeSize": 10,
+            "Encrypted": false
+        }
+    ]
+}

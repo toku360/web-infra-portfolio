@@ -1,0 +1,35 @@
+
+- name: Gather Linux Information
+
+  hosts: linux
+
+  tasks:
+
+    - name: Hostname
+
+      command: hostname
+
+      register: hostname_result
+
+    - debug:
+        var: hostname_result.stdout
+
+    - name: Uptime
+
+      command: uptime
+
+      register: uptime_result
+
+    - debug:
+        var: uptime_result.stdout
+
+    - name: Disk
+
+      command: df -h
+
+      register: disk_result
+
+    - debug:
+        var: disk_result.stdout_lines
+
+

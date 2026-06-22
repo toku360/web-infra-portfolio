@@ -1,0 +1,193 @@
+{
+    "Reservations": [
+        {
+            "ReservationId": "r-0ca030b9e14b8a3ee",
+            "OwnerId": "723288728731",
+            "Groups": [],
+            "Instances": [
+                {
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2026-06-20T06:25:44+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-0623a0f4ab9fd558a",
+                                "EbsCardIndex": 0
+                            }
+                        }
+                    ],
+                    "ClientToken": "terraform-20260620062543573000000001",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "IamInstanceProfile": {
+                        "Arn": "arn:aws:iam::723288728731:instance-profile/web-infra-portfolio-dev-weblogic-profile",
+                        "Id": "AIPA2QZ26ESNRU6YAE6JW"
+                    },
+                    "NetworkInterfaces": [
+                        {
+                            "Association": {
+                                "IpOwnerId": "amazon",
+                                "PublicDnsName": "ec2-54-199-36-178.ap-northeast-1.compute.amazonaws.com",
+                                "PublicIp": "54.199.36.178"
+                            },
+                            "Attachment": {
+                                "AttachTime": "2026-06-20T06:25:44+00:00",
+                                "AttachmentId": "eni-attach-09a3a73238d35deaa",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "NetworkCardIndex": 0
+                            },
+                            "Description": "",
+                            "Groups": [
+                                {
+                                    "GroupId": "sg-05627acaa73aea267",
+                                    "GroupName": "web-infra-portfolio-dev-weblogic-sg"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "06:d7:97:b5:29:d3",
+                            "NetworkInterfaceId": "eni-027c0537689d995a0",
+                            "OwnerId": "723288728731",
+                            "PrivateDnsName": "ip-10-0-1-219.ap-northeast-1.compute.internal",
+                            "PrivateIpAddress": "10.0.1.219",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Association": {
+                                        "IpOwnerId": "amazon",
+                                        "PublicDnsName": "ec2-54-199-36-178.ap-northeast-1.compute.amazonaws.com",
+                                        "PublicIp": "54.199.36.178"
+                                    },
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-10-0-1-219.ap-northeast-1.compute.internal",
+                                    "PrivateIpAddress": "10.0.1.219"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-09244fea2c9af0d13",
+                            "VpcId": "vpc-02e7e037743392b14",
+                            "InterfaceType": "interface",
+                            "Operator": {
+                                "Managed": false
+                            }
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupId": "sg-05627acaa73aea267",
+                            "GroupName": "web-infra-portfolio-dev-weblogic-sg"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Tags": [
+                        {
+                            "Key": "Environment",
+                            "Value": "dev"
+                        },
+                        {
+                            "Key": "Project",
+                            "Value": "web-infra-portfolio"
+                        },
+                        {
+                            "Key": "Application",
+                            "Value": "WebLogic"
+                        },
+                        {
+                            "Key": "Role",
+                            "Value": "weblogic"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "web-infra-portfolio-dev-weblogic"
+                        },
+                        {
+                            "Key": "Owner",
+                            "Value": "toku360"
+                        }
+                    ],
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 2
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled",
+                        "HttpProtocolIpv6": "disabled",
+                        "InstanceMetadataTags": "disabled"
+                    },
+                    "EnclaveOptions": {
+                        "Enabled": false
+                    },
+                    "BootMode": "uefi-preferred",
+                    "PlatformDetails": "Linux/UNIX",
+                    "UsageOperation": "RunInstances",
+                    "UsageOperationUpdateTime": "2026-06-20T06:25:44+00:00",
+                    "PrivateDnsNameOptions": {
+                        "HostnameType": "ip-name",
+                        "EnableResourceNameDnsARecord": false,
+                        "EnableResourceNameDnsAAAARecord": false
+                    },
+                    "MaintenanceOptions": {
+                        "AutoRecovery": "default",
+                        "RebootMigration": "default"
+                    },
+                    "CurrentInstanceBootMode": "uefi",
+                    "NetworkPerformanceOptions": {
+                        "BandwidthWeighting": "default"
+                    },
+                    "Operator": {
+                        "Managed": false,
+                        "HiddenByDefault": false
+                    },
+                    "InstanceId": "i-06949470bc5b8da16",
+                    "ImageId": "ami-0bdd4b6c4c6feca84",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "PrivateDnsName": "ip-10-0-1-219.ap-northeast-1.compute.internal",
+                    "PublicDnsName": "ec2-54-199-36-178.ap-northeast-1.compute.amazonaws.com",
+                    "StateTransitionReason": "",
+                    "AmiLaunchIndex": 0,
+                    "ProductCodes": [
+                        {
+                            "ProductCodeId": "3qk9e6x2ni81uiqnorll45r3f",
+                            "ProductCodeType": "marketplace"
+                        }
+                    ],
+                    "InstanceType": "t3a.small",
+                    "LaunchTime": "2026-06-20T06:25:44+00:00",
+                    "Placement": {
+                        "AvailabilityZoneId": "apne1-az4",
+                        "GroupName": "",
+                        "Tenancy": "default",
+                        "AvailabilityZone": "ap-northeast-1a"
+                    },
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "SubnetId": "subnet-09244fea2c9af0d13",
+                    "VpcId": "vpc-02e7e037743392b14",
+                    "PrivateIpAddress": "10.0.1.219",
+                    "PublicIpAddress": "54.199.36.178"
+                }
+            ]
+        }
+    ]
+}

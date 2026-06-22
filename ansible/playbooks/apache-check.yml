@@ -1,0 +1,61 @@
+
+- name: Apache Health Check
+
+  hosts: apache
+
+  become: yes
+
+  tasks:
+
+    - name: Check Service
+
+      command: systemctl is-active httpd
+
+      register: result
+
+    - debug:
+        var: result.stdout
+
+    - name: HTTP Check
+
+      uri:
+
+        url: http://localhost
+
+        return_content: yes
+
+      register: webpage
+
+    - debug:
+        var: webpage.status---
+- name: Apache Health Check
+
+  hosts: apache
+
+  become: yes
+
+  tasks:
+
+    - name: Check Service
+
+      command: systemctl is-active httpd
+
+      register: result
+
+    - debug:
+        var: result.stdout
+
+    - name: HTTP Check
+
+      uri:
+
+        url: http://localhost
+
+        return_content: yes
+
+      register: webpage
+
+    - debug:
+        var: webpage.status
+
+

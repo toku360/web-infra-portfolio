@@ -1,0 +1,7 @@
+- import_playbook: gather-info.yml
+
+- import_playbook: apache-check.yml
+
+- import_playbook: weblogic-check.yml
+
+

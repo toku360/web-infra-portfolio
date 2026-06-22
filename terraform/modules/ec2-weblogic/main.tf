@@ -48,7 +48,10 @@ resource "aws_instance" "weblogic" {
   set -eux
 
   dnf clean all
-  dnf makecache -y
+
+  dnf install -y https://s3.ap-northeast-1.amazonaws.com/amazon-ssm-ap-northeast-1/latest/linux_amd64/amazon-ssm-agent.rpm
+  systemctl enable amazon-ssm-agent
+  systemctl start amazon-ssm-agent
 
   dnf install -y java-17-openjdk java-17-openjdk-devel unzip tar wget
 
@@ -62,6 +65,7 @@ resource "aws_instance" "weblogic" {
 
   java -version > /u01/app/oracle/logs/java-version.log 2>&1
 
+  
   EOF
 
 

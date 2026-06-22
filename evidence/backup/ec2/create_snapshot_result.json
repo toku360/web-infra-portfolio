@@ -1,0 +1,12 @@
+{
+    "Tags": [],
+    "SnapshotId": "snap-0582ca2cc36d9581a",
+    "VolumeId": "vol-0623a0f4ab9fd558a",
+    "State": "pending",
+    "StartTime": "2026-06-22T02:49:34.910000+00:00",
+    "Progress": "",
+    "OwnerId": "723288728731",
+    "Description": "Day37 WebLogic before reboot snapshot",
+    "VolumeSize": 10,
+    "Encrypted": false
+}
